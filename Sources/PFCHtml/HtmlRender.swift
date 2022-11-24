@@ -1,24 +1,24 @@
 /// Renders an array of nodes to an HTML string.
 ///
 /// - Parameter nodes: An array of nodes.
-public func render(_ nodes: [Node], voidElements: Set<String> = Html.voidElements) -> String {
+public func render(_ nodes: [Node], voidElements: Set<String> = PFCHtml.voidElements) -> String {
   return nodes.reduce(into: "") { $0.append(render($1, voidElements: voidElements)) }
 }
 
 /// Renders a node to an HTML string.
 ///
 /// - Parameter node: A node.
-public func render(_ node: Node, voidElements: Set<String> = Html.voidElements) -> String {
+public func render(_ node: Node, voidElements: Set<String> = PFCHtml.voidElements) -> String {
   var rendered = ""
   render(node, into: &rendered, voidElements: voidElements)
   return rendered
 }
 
-public func render<T>(_ children: [ChildOf<T>], voidElements: Set<String> = Html.voidElements) -> String {
+public func render<T>(_ children: [ChildOf<T>], voidElements: Set<String> = PFCHtml.voidElements) -> String {
   return children.reduce(into: "") { $0.append(render($1, voidElements: voidElements)) }
 }
 
-public func render<T>(_ child: ChildOf<T>, voidElements: Set<String> = Html.voidElements) -> String {
+public func render<T>(_ child: ChildOf<T>, voidElements: Set<String> = PFCHtml.voidElements) -> String {
   return render(child.rawValue, voidElements: voidElements)
 }
 

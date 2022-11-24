@@ -12,12 +12,12 @@ public struct Config {
 
 public func debugRender(_ nodes: [Node], config: Config = .pretty) -> String {
   return nodes
-    .map { debugRender($0, config: config, voidElements: Html.voidElements) }
+    .map { debugRender($0, config: config, voidElements: PFCHtml.voidElements) }
     .joined()
 }
 
 public func debugRender(_ node: Node, config: Config = .pretty) -> String {
-  return debugRender(node, config: config, voidElements: Html.voidElements)
+  return debugRender(node, config: config, voidElements: PFCHtml.voidElements)
 }
 
 func debugRender(_ node: Node, config: Config = .pretty, voidElements: Set<String>) -> String {

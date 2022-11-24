@@ -1,4 +1,4 @@
-import Html
+import PFCHtml
 import PlaygroundSupport
 import WebKit
 
@@ -56,7 +56,7 @@ That’s unfortunate because we are used to working in Swift, which is strongly 
 HTML documents can be created with this library in a tree-like fashion, much like how you might create a nested JSON document:
 """),
       .pre("""
-import Html
+import PFCHtml
 
 let document = html([
   body([

@@ -1,4 +1,4 @@
-import Html
+import PFCHtml
 import SnapshotTesting
 
 extension Snapshotting where Value == [Node], Format == String {

@@ -359,7 +359,7 @@ extension Node {
   ///   - title: Content for the `<title>` element.
   ///   - content: Child nodes.
   //public static func head(title: String, content: ChildOf<Tag.Head> = []) -> ChildOf<Tag.Html> {
-  //  return head([Html.title(title).rawValue, content.rawValue])
+  //  return head([PFCHtml.title(title).rawValue, content.rawValue])
   //}
 
   /// The `<header>` element represents introductory content for its nearest ancestor `<main>` element or sectioning content or sectioning root element. A `<header>` typically contains a group of introductory or navigational aids.

@@ -1,5 +1,5 @@
-import Html
-import HtmlSnapshotTesting
+import PFCHtml
+import PFCHtmlSnapshotTesting
 import SnapshotTesting
 import XCTest
 
