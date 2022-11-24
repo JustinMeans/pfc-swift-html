@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "swift-html",
+  name: "pfc-swift-html",
   platforms: [
     .iOS(.v13),
     .macOS(.v10_15),
@@ -10,33 +10,33 @@ let package = Package(
   ],
   products: [
     .library(
-      name: "Html",
-      targets: ["Html"]),
+      name: "PFCHtml",
+      targets: ["PFCHtml"]),
     .library(
-      name: "HtmlSnapshotTesting",
-      targets: ["HtmlSnapshotTesting"]),
+      name: "PFCHtmlSnapshotTesting",
+      targets: ["PFCHtmlSnapshotTesting"]),
   ],
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.10.0"),
   ],
   targets: [
     .target(
-      name: "Html"
+      name: "PFCHtml"
     ),
     .testTarget(
-      name: "HtmlTests",
-      dependencies: ["Html"]
+      name: "PFCHtmlTests",
+      dependencies: ["PFCHtml"]
     ),
     .target(
-      name: "HtmlSnapshotTesting",
+      name: "PFCHtmlSnapshotTesting",
       dependencies: [
         "Html",
         .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
       ]
     ),
     .testTarget(
-      name: "HtmlSnapshotTestingTests",
-      dependencies: ["HtmlSnapshotTesting"],
+      name: "PFCHtmlSnapshotTestingTests",
+      dependencies: ["PFCHtmlSnapshotTesting"],
       exclude: [
         "__Snapshots__",
       ]
