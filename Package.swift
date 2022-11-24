@@ -30,7 +30,7 @@ let package = Package(
     .target(
       name: "PFCHtmlSnapshotTesting",
       dependencies: [
-        "Html",
+        "PFCHtml",
         .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
       ]
     ),
